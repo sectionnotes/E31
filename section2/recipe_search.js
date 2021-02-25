@@ -1,5 +1,4 @@
 const fs = require('fs');
-
 const recipes = fs.readFileSync('mamba.json', 'utf8');
 const recipesArray = JSON.parse(recipes);
 
