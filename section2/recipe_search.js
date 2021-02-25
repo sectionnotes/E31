@@ -10,6 +10,10 @@ function searchRecipes(searchTerm) {
 
   if (searchTerm) {
     searchTerm = searchTerm.toLowerCase();
+
+    // An alternative to the for-loop below
+    // data.results=recipesArray.filter(r=>r.recipename.toLowerCase().includes(searchTerm));
+
     for (let i=0; i<recipesArray.length; i++) {
       if (recipesArray[i].recipename.toLowerCase().includes(searchTerm)) {
         // Found a match, save it into the results array.
@@ -18,7 +22,7 @@ function searchRecipes(searchTerm) {
     }
   }
 
-  // data.results=recipesArray.filter(r=>r.recipename.toLowerCase().includes(searchTerm));
+
 
   // I've completed the search, so I'm just going to put the number of
   // matches into a "count" field of my data object.
