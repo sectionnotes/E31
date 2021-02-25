@@ -8,17 +8,17 @@ const recipesArray = JSON.parse(recipes);
 function searchRecipes(searchTerm) {
   let data = { results: [] };
 
-	if (searchTerm) {
-  	searchTerm = searchTerm.toLowerCase();
-  	for (let i=0; i<recipesArray.length; i++) {
-  		if (recipesArray[i].recipename.toLowerCase().includes(searchTerm)) {
-  			// Found a match, save it into the results array.
-  			data.results.push(recipesArray[i]);
-  		}
-  	}
-	}
+  if (searchTerm) {
+    searchTerm = searchTerm.toLowerCase();
+    for (let i=0; i<recipesArray.length; i++) {
+      if (recipesArray[i].recipename.toLowerCase().includes(searchTerm)) {
+        // Found a match, save it into the results array.
+        data.results.push(recipesArray[i]);
+      }
+    }
+  }
 
-	// data.results=recipesArray.filter(r=>r.recipename.toLowerCase().includes(searchTerm));
+  // data.results=recipesArray.filter(r=>r.recipename.toLowerCase().includes(searchTerm));
 
   // I've completed the search, so I'm just going to put the number of
   // matches into a "count" field of my data object.
