@@ -22,8 +22,6 @@ function searchRecipes(searchTerm) {
     }
   }
 
-
-
   // I've completed the search, so I'm just going to put the number of
   // matches into a "count" field of my data object.
   data.count = data.results.length;
